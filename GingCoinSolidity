@@ -9,15 +9,16 @@ uint256 public totalSupply;
 mapping(address => uint256) balances;address devAddress;// Events
 event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 event Transfer(address indexed from, address indexed to, uint256 value);
- 
+
+
 // Owner of account approves the transfer of an amount to another account
 mapping(address => mapping (address => uint256)) allowed;// This is the constructor and automatically runs when the smart contract is uploaded
-function tokenName(GingCoin) { // Set the constructor to the same name as the contract name
-    name = "GingCoin"; // set the token name here
+function GingCoin() { // Set the constructor to the same name as the contract name
+    name = "GingerSnaps"; // set the token name here
     symbol = "GING"; // set the Symbol here
-    decimals = 10; // set the number of decimals
-    devAddress=0x0000000000000000000000000000000000000000; // Add the address that you will distribute tokens from here
-    uint initialBalance=1000000000*150000000; // 1M tokens
+    decimals = 9; // set the number of decimals
+    devAddress=0xff50C7Bb65725AeB904ECF0Af96576e0a0d8d6cc; // Add the address that you will distribute tokens from here
+    uint initialBalance=1000000*150; // 1M tokens
     balances[devAddress]=initialBalance;
     totalSupply+=initialBalance; // Set the total suppy
 }function balanceOf(address _owner) constant returns (uint256 balance) {
